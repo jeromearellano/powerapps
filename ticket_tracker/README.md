@@ -22,6 +22,22 @@ PowerApp Ticket Tracker is a project management tool designed to help teams trac
 4. Track the status of the ticket and update it as needed.
 5. Track the time spent on each ticket by users.
 
+## SharePoint Site Structure
+To use this PowerApp, you need to create a SharePoint list with the following columns:
+
+- **Title**: Single line of text
+- **Tipo**: Choice
+- **Stato**: Choice
+- **NTicket**: Single line of text
+- **DataInizio**: Date and Time
+- **DataFine**: Date and Time
+- **MinutoSpeso**: Calculated (calculation based on other columns)
+  - Formula: `=(DataFine-DataInizio)*1440`
+- **Nota**: Multiple lines of text
+- **DataCreazione**: Calculated (calculation based on other columns)
+  - Formula: `=TEXT(Created,"dd/mm/yyyy")`
+- **TipoStatoTicket**: Choice
+
 ## Screenshot
 ![PowerApp Ticket Tracker Screenshot](screenshot.png)
 
